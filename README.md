@@ -1,2 +1,2 @@
 # dmi-integrated-dashboards-bi
-Intergrated dashboards ported from PowerBI
+Integrated dashboards ported from PowerBI
