@@ -16,8 +16,8 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          sudo cp -rf /etc/dmi-powerbi-integrated-dashboards/* /tmp/dmi-powerbi-integrated-dashboards-backup/
-          cd /var/lib/github_workflows/dmi-powerbi-integrated-dashboards
+          sudo cp -rf /etc/dmi-integrated-dashboards-bi/* /tmp/dmi-powerbi-integrated-dashboards-backup/
+          cd /var/lib/github_workflows/dmi-integrated-dashboards-bi
           sudo git switch main
           sudo rm -rf dist
           sudo rm package-lock.json
@@ -26,5 +26,5 @@ jobs:
           sudo git pull
           sudo npm install
           sudo ng build --configuration production
-          sudo cp -rf . /etc/dmi-powerbi-integrated-dashboards/
+          sudo cp -rf . /etc/dmi-integrated-dashboards-bi/
           echo "Dashboards are upto date! Deployment successful."
